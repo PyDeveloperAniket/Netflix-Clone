@@ -1,0 +1,416 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+/* Color variables */
+:root {
+  --md-dark-color: #1d1d1d; /* Medium dark color */
+  --dark-color: #000000; /* Dark color */
+  --light-white-color: #ffffff; /* Light color */
+  --red-color: #ff1e01; /* Red color */
+}
+
+/* Resetting default styles */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: "Inter", sans-serif; /* Setting font family */
+  background: black; /* Background color gradient */
+}
+
+/* Hide scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Link styles */
+a {
+  text-decoration: none;
+}
+
+/* Image styles */
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Wrapper styles */
+.wrapper {
+  min-height: 100vh; /* Minimum height of the wrapper */
+}
+
+/* Container styles */
+.wrapper .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background-color: transparent;
+}
+
+/* Search container styles */
+.search-container {
+  background-color: transparent;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo styles */
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* Search element styles */
+.search-element {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Search element heading styles */
+.search-element h3 {
+  align-self: center;
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Search input styles */
+.search-element .form-control {
+  padding: 1rem 1rem;
+  font-size: 1.4rem;
+  border: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  outline: none;
+  color: var(--light-white-color);
+  width: 500px;
+  height: 45px;
+  background-color: transparent;
+  border: 1px solid whitesmoke;
+  font-size: medium;
+}
+
+/* Search list styles */
+.search-list {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  max-height: 500px;
+  overflow-y: scroll;
+  z-index: 10;
+}
+
+/* Search list item styles */
+.search-list .search-list-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid white;
+  width: 500px;
+  color: rgb(251, 251, 251);
+  cursor: pointer;
+  transition: background-color 200ms ease;
+  backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the desired transparency */
+}
+
+
+/* Hover styles for search list item */
+.search-list .search-list-item:hover {
+  background-color: #2d0202;
+  backdrop-filter: blur(10px);
+}
+
+/* Search list item container styles */
+.search-list-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Search item thumbnail styles */
+.search-item-thumbnail img {
+  width: 40px;
+  margin-right: 1rem;
+}
+
+/* Search item info styles */
+.search-item-info h3 {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Search item info paragraph styles */
+.search-item-info p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+/* Scrollbar styles for search list */
+.search-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.search-list::-webkit-scrollbar-thumb {
+  background-color: var(--red-color);
+  outline: none;
+  border-radius: 10px;
+}
+
+/* Class to hide search list */
+.hide-search-list {
+  display: none;
+}
+
+/* Result container styles */
+.result-container {
+  margin-top: 40px;
+  padding-top: 10px;
+}
+
+/* Movie poster styles */
+.movie-poster img {
+  max-width: 300px;
+  margin-left: 35%;
+  border: 2px solid #fff;
+}
+
+/* Movie info styles */
+.movie-info {
+  text-align: center;
+  color: #fff;
+  padding-top: 1rem;
+}
+
+/* Movie title styles */
+.movie-title {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Movie miscellaneous info styles */
+.movie-misc-info {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Year info styles */
+.movie-info .year {
+  font-weight: 500;
+}
+
+/* Rated info styles */
+.movie-info .rated {
+  background-color: red;
+  padding: 0.4rem;
+  margin: 0 0.4rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* Released info styles */
+.movie-info .released {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Writer info styles */
+.movie-info .writer {
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* Genre info styles */
+.movie-info .genre {
+  background-color: red;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+/* Plot info styles */
+.movie-info .plot {
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+/* Language info styles */
+.movie-info .language {
+  color: var(--red-color);
+  font-style: italic;
+}
+
+/* Awards info styles */
+.movie-info .awards {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* Awards icon styles */
+.movie-info .awards i {
+  color: var(--red-color);
+  margin: 1rem 0.7rem 0 0;
+}
+
+/* favourite button css */
+.fav-btn {
+  background-color: #dc030f;
+  border: 1px solid #dc030f;
+  color: white;
+  width: auto;
+  height: 40px;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: medium;
+  margin-top:10px;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 0;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.fav-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(165, 17, 17);
+}
+
+.fav-btn:active {
+  transform: scale(0.95);
+}
+
+.footer{
+  background-color: transparent;
+  width: auto;
+  height: 5px;
+}
+/* Responsive styles for screens with a maximum width of 450px */
+@media(min-width: 375px) and (max-width:768px) {
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .search-element .form-control {
+      width: 300px;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+    }
+    .search-element h3 {
+      font-size: 1.4rem; /* Decrease heading font size */
+    }
+    .search-list {
+      width: 90%;
+      right: 50%;
+      -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+      transform: translateX(50%); /* Center align the search list */
+    }
+    .search-list .search-list-item {
+      width: 100%; /* Set the width of search list items to 100% */
+    }
+    /* Search item info styles */
+    .search-item-info h3 {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* Search item info paragraph styles */
+    .search-item-info p {
+      font-size: 0.8rem;
+      margin-top:2px;
+      font-weight: 600;
+      opacity: 0.6;
+    }
+
+    .movie-poster img {
+      max-width: 150px;
+      margin:auto;
+      border: 2px solid #fff;
+    }
+    .movie-misc-info {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; /* Change the direction of movie miscellaneous info to vertical */
+    }
+    .movie-misc-info li:nth-child(2) {
+      margin: 0.8rem 0; /* Add margin to the second list item of movie miscellaneous info */
+    }
+  }
+    
+  /* Responsive styles for screens with a minimum width of 800px */
+  @media (min-width: 768px) {
+    .search-element {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; /* Change the direction of search element to horizontal */
+    }
+    .search-element h3 {
+      margin-bottom: 0; /* Remove bottom margin from search element heading */
+    }
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Display movie results in a grid with 2 columns */
+    }
+
+    /* Search item info styles */
+    .search-item-info h3 {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* Search item info paragraph styles */
+    .search-item-info p {
+      font-size: 0.8rem;
+      margin-top:2px;
+      font-weight: 600;
+      opacity: 0.6;
+    }
+    
+    .movie-info {
+      text-align: left;
+      padding-top: 0;
+    }
+    .movie-info .movie-misc-info {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+    .movie-info .plot {
+      margin-left: 0; /* Remove left margin from movie plot */
+    }
+    .movie-info .writer {
+      padding-left: 0;
+      margin-left: 0; /* Remove left padding and margin from movie writer info */
+    }
+  }
+  

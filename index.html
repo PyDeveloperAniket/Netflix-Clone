@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Netflix Clone</title>
+    <!-- External CSS and icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel = "stylesheet" href = "src/search.css">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+</head>
+<body>
+
+    <!-- Wrapper div to contain the entire content -->
+    <div class = "wrapper">
+        <!-- Logo section -->
+        <div class = "logo">
+            <img src="assets/brand_logo.png" alt="logo">
+        </div>
+
+        <!-- Search container -->
+        <div class = "search-container">
+            <div class = "search-element">
+                <!-- Input for searching movies -->
+                <input type = "text" class = "form-control" placeholder="Search movie" id = "movie-search-box" onkeyup="findMovies()" onclick = "findMovies()">
+                <!-- Search list for displaying search results -->
+                <div class = "search-list" id = "search-list">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Container for movie result -->
+        <div class = "container">
+            <div class = "result-container" target="_blank">
+                <div class = "result-grid" id = "result-grid"  target="_blank">
+                    <!-- Movie poster section -->
+                    <div class = "movie-poster">
+                        <img id="mainimg" src = "assets/poster.jpg" alt = "movie poster">
+                    </div>
+                    <!-- Movie information section -->
+                    <div class = "movie-info">
+                        <h3 class = "movie-title">Tumbbad</h3>
+                        <ul class = "movie-misc-info">
+                            <li class = "year">Year: 2018</li>
+                            <li class = "rated">Ratings: PG-18</li>
+                            <li class = "released">Released: 12 October 2018</li>
+                        </ul>
+                        <p class = "genre"><b>Genre:</b> Drama, Fantasy, Horror, Thriller</p>
+                        <p class = "writer"><b>Writer:</b> Mitesh ShahAdesh, PrasadRahi Anil Barve</p>
+                        <p class="actors"><b>Actors:</b> Sohum Shah, Jyoti Malshe, Anita Date-Kelkar</p>
+                        <p class = "plot"><b>Plot:</b> When a family builds a shrine for Hastar, a monster who is never to be worshipped, and attempts to get their hands on his cursed wealth, they face catastrophic consequences.</p>
+                        <p class = "language"><b style="color: white;">Language:</b> Hindi, Telugu, Tamil, Marathi, Swedish</p>
+                        <p class = "awards"><b><i class = "fas fa-award"></i></b> Best Cinematography</p>
+                        <button id="add_watchlist" class="fav-btn">+ Add to watchlist</button>
+                        <button class="fav-btn" onclick="redirectTofavPage()" style="background-color: transparent; border: 1px solid white; text-align: center; width: auto; margin-left: 10px ;">Watchlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            
+        </div>
+    </footer>
+
+
+    <!-- JavaScript file for handling search functionality -->
+    <script src = "src/index.js"></script>
+</body>
+</html>

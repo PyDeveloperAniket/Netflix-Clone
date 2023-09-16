@@ -1,0 +1,471 @@
+body {
+  font-family: "Inter", sans-serif;
+  background: black; 
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.col{
+  width: 300px;
+}
+
+.card-img-top{
+  max-width: 300px;
+}
+
+.result-container{
+  border: 1px solid white;
+  height: 500px;
+  width: 250px;
+}
+
+.row{
+  border-radius: 0px;
+}
+.card{
+  background-color: transparent;
+}
+.card-img-top{
+  width: 200px;
+  height: 250px;
+  border: 2px solid white;
+  border-radius: none;
+}
+.card-title{
+  color: white;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.btn {
+  background-color: #dc030f;
+  border: 1px solid #dc030f;
+  color: white;
+  width: auto;
+  height: 40px;
+  padding: 8px 20px;
+  font-size: medium;
+  margin-top:10px;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 0;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(165, 17, 17);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* host star css */
+
+/* Movie Display Section */
+.title {
+  color: #fff;
+  opacity: 0.9;
+  padding-left: 5%;
+  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.row {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 10px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.col {
+  width: calc(30% - 200px); /* Adjust the column width to create a flex column layout */
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 20px;
+  height: 100%;
+  margin-top: 10px;
+  margin-left: 20px;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  position: relative;
+  min-width: 150px;
+  width: 150px;
+  height: 210px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: -20px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card:hover .card-body {
+  opacity: 1;
+}
+
+.card-body {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+  padding: 10px;
+  transition: 0.5s;
+
+  opacity: 1; /* Set the initial opacity to 1 to display card details */
+  background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-top: 60%;
+}
+
+.des {
+  color: #fff;
+  opacity: 0.9;
+  margin: 5px 0;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.watchlist-btn {
+  position: relative;
+  width: 100%;
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+.watchlist-btn::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  height: 33px;
+  width: 33px;
+  background-image: url("/assets/bin.png");
+  background-size: cover;
+  transform: scale(0.4);
+}
+
+.watchlist-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.watchlist-btn:active {
+  transform: scale(0.95);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .col {
+    width: calc(30% - 20px); /* 2 columns on screens <= 768px */
+  }
+  .title {
+    color: #fff;
+    opacity: 0.9;
+    padding-left: 5%;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .row {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 10px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+ 
+  .card-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card {
+    position: relative;
+    min-width: 150px;
+    width: 150px;
+    height: 210px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+  
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .card:hover .card-body {
+    opacity: 1;
+  }
+  
+  .card-body {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+  
+    opacity: 1; /* Set the initial opacity to 1 to display card details */
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+  }
+  
+  .name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 60%;
+  }
+  
+  .des {
+    color: #fff;
+    opacity: 0.9;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  
+  .watchlist-btn {
+    position: relative;
+    width: 100%;
+    text-transform: capitalize;
+    background: none;
+    border: none;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 5px;
+  }
+  
+  .watchlist-btn::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    height: 33px;
+    width: 33px;
+    background-image: url("/assets/bin.png");
+    background-size: cover;
+    transform: scale(0.4);
+  }
+  
+  .watchlist-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .watchlist-btn:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (max-width: 576px) {
+  .col {
+    width: calc(50% - 20px); /* 1 column on screens <= 576px */
+    margin-right: 0;
+  }
+  .title {
+    color: #fff;
+    opacity: 0.9;
+    padding-left: 5%;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .row {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 10px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .card-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card {
+    position: relative;
+    min-width: 150px;
+    width: 200px;
+    height: 210px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+  
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .card:hover .card-body {
+    opacity: 1;
+  }
+  
+  .card-body {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+  
+    opacity: 1; /* Set the initial opacity to 1 to display card details */
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+  }
+  
+  .name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 60%;
+  }
+  
+  .des {
+    color: #fff;
+    opacity: 0.9;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  
+  .watchlist-btn {
+    position: relative;
+    width: 100%;
+    text-transform: capitalize;
+    background: none;
+    border: none;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 5px;
+  }
+  
+  .watchlist-btn::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    height: 33px;
+    width: 33px;
+    background-image: url("/assets/bin.png");
+    background-size: cover;
+    transform: scale(0.4);
+  }
+  
+  .watchlist-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .watchlist-btn:active {
+    transform: scale(0.95);
+  }
+}
