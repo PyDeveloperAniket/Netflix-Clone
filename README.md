@@ -2,6 +2,10 @@
 
 This web application allows users to search for movies using an API and perform various actions such as adding movies to their favorites and viewing detailed information about a movie. The application is built with HTML, CSS, and JavaScript.
 
+# View Project
+
+- - [Moviemaza.netlify.app](https://moviemaza.netlify.app/)
+
 ## Features
 
 ### Home Page
