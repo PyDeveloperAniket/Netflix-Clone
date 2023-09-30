@@ -4,7 +4,7 @@ This web application allows users to search for movies using an API and perform 
 
 # View Project
 
-- - https://moviemaza.netlify.app/
+- https://moviemaza.netlify.app/
 
 ## Features
 
